@@ -2,52 +2,241 @@
     <head>
         <title>Andrew M. Resume</title>
         <meta name="description" content"All Projects">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    
+        
     </head>
     
     <style>
-    .btn_about_me {
-        background-color: green;
+    
+    p,button {
+    font-family: Roboto;
+
     }
 
-    .btn_projects {
-        background-color: blue;
-    }
 
-    .btn_contact {
-        background-color: orange;
-    }
-
-    .threebtn{
-        position: relative;
-        top: 50%;
-        left: 50%;
-
+    .header{
         display: grid;
-        grid-template-columns: 100px 100px 100px;
-        
+        grid-template-columns: 1fr .1fr .1fr .1fr;
+        padding-left: 200px;
+        padding-right: 200px;
+        font-family: Roboto;
+    }
+
+    .header,.about,.project,.contact{
+        margin-right: 20px;
+    }
+    
+    .about_me,.projects{
+        padding-left: 200px;
+        padding-right: 200px;
+    }
+
+    .projects{
+        margin-top: 70;
+        padding-left: 200px;
+        padding-right: 200px;
+    }
+
+    .about_me_grid{
+        display: grid;
+        grid-template-columns: .75fr .25fr;
+
+    }
+
+    .headshot{
+        width: 300px;
+        border-radius: 7px;
+        box-shadow: 0px 0px 10px 0px;
         
     }
+
+    .git_btn{
+        padding-top:8;
+        padding-bottom:8;
+        padding-left:15;
+        padding-right:15;
+        background: black;
+        color: rgb(224, 221, 221);
+    }
+
+    .projects_title{
+        font-weight: bold;
+        font-size: 30;
+    }
+
+    .project_cards{
+        margin-bottom: 40px;
+    }
+
+    .maze_project,.image_man_project,.blackjack_project,.clear_cell_project
+    ,.grid_click_project{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 100px;
+        padding-bottom:50px;
+    }
+
+    .vid{
+        box-shadow: 0px 0px 10px 0px;
+    }
+
+    .card_title{
+        
+        font-size: 25;
+    }
+
+
+
     </style>
     
 
     </head>
     <body>
-        <h1>All Projects</h1>
         
-        
-    <div class="threebtn"> 
-        <button class="btn_about_me">About met</button>
-        <button class="btn_projects">Project</button>
-        <button class="btn_contact">Contact</button>
-    </div>
+        <div class="header">
+            <div class="name">
+                <p>
+                    Andrew Morris
+                </p>
+            </div>
 
-       
-        
+            <div class="about">
+                <p>
+                    About
+                </p>
+            </div>
+            <div class="project">
+                <p>
+                    Projects
+                </p>
+            </div>
+            <div class="contact">
+                <p>
+                    Contact
+                </p>
+            </div>
 
+        </div>
+        
+        <div class="about_me">
+            <div class="about_me_title">
+                <p>
+                    Hello
+                </p>
+            </div>
+            <div class="about_me_grid">
+                
+                <div class="about_me_text">
+                    <p>
+                        Hello and welcome to amorris.io this website
+                        services as an online portfolio. My name is Andrew 
+                        Morris, I am current an Information Science
+                        major of University of Maryland, College Park,
+                        I also have an Associate of Science degree from
+                        Howard Community College.
+                    </p>
+                </div>
+
+                <div>
+                    <img class="headshot" src="pictures/me.jpg">
+                </div>
+                
+            </div>
+
+            <div class="github_link">
+                <button class="git_btn">
+                    View Github
+                </button>
+            </div>
+        </div>
+    
+        
+        <div class="projects">
+            <p class="projects_title">Projects</p>
+            <p>Projects with visuals :</p>
+
+            <div type="card" class="project_cards">
+                <p class="card_title">DFS BFS Dijkstra's algorithm</p>
+                <div class="maze_project">
+                    <p>
+                        This project implements a DFT BFT and Djstra on a maze.
+                    </p>
+
+                    <div class="maze_video">
+                        <video class="vid" width="620" controls autoplay loop>
+                            <source src="videos/maze.mp4" type="video/mp4">
+                            <source src="movie.ogg" type="video/ogg">
+                        </video>
+                    </div>
+                   
+                </div>
+
+                <div class="image_man_project">
+                    <p>
+                        Description
+                    </p>
+
+                    <div class="image_man_video">
+                        <video class="vid" width="380" controls autoplay loop>
+                            <source src="videos/image_editting.mp4" type="video/mp4">
+                            <source src="movie.ogg" type="video/ogg">
+                        </video>
+                    </div>
+
+                </div>
+
+                <div class="blackjack_project">
+                    <p>
+                        Description
+                    </p>
+
+                    <div class="blackjack_video">
+                        <video class="vid" width="952" controls autoplay loop>
+                            <source src="videos/blackjack.mp4" type="video/mp4">
+                            <source src="movie.ogg" type="video/ogg">
+                        </video>
+                    </div>
+
+                </div>
+
+                <div class="clear_cell_project">
+                    <p>
+                        Description
+                    </p>
+
+                    <div class="clear_cell_video">
+                        <video class="vid" width="599" controls autoplay loop>
+                            <source src="videos/cell_clear.mp4" type="video/mp4">
+                            <source src="movie.ogg" type="video/ogg">
+                        </video>
+                    </div>
+
+                </div>
+
+                <div class="grid_click_project">
+                    <p>
+                        Description
+                    </p>
+
+                    <div class="grid_click_video">
+                        <video class="vid" width="484" controls autoplay loop>
+                            <source src="videos/grid click.mp4" type="video/mp4">
+                            <source src="movie.ogg" type="video/ogg">
+                        </video>
+                    </div>
+
+                </div>
+            </div>
+        </div>
 
 
 
         
     </body>
 </html>   
+
 
