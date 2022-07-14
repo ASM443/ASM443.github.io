@@ -1,7 +1,6 @@
 <html>   
     <head>
         <title>Andrew M. Resume</title>
-        <meta name="description" content"All Projects">
 
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,37 +17,43 @@
     }
 
 
-    .header{
+    .header, .about_me, .projects{
+        margin-left: 7%;
+        margin-right: 7%;
+        margin-top: auto;
+        
+    }
+
+    .header_grid{
         display: grid;
         grid-template-columns: 1fr .1fr .1fr .1fr;
-        margin-left: 200px;
-        margin-right: 200px;
         font-family: Roboto;
         font-weight: bold;
+        padding:0; 
+    }
+
+    .header_about_text, .header_project_text, .header_contact_text{
+        justify-items: right;
+        align-items: right;
+        text-align: right;
     }
 
     .about_me_title{
         font-size: 40;
         font-weight: bold;
         
-    }
-    
-    .about_me,.projects{
-        padding-left: 200px;
-        padding-right: 200px;
-    }
+    } 
 
     .projects{
         margin-top: 70;
-        padding-left: 200px;
-        padding-right: 200px;
     }
 
     .about_me_grid{
         display: grid;
-        grid-template-columns: .75fr .25fr;
-        grid-gap: 50px;
+        grid-template-columns: .8fr .2fr;
+        grid-gap: 5%;
         font-size: 20;
+        justify-items: right;
 
     }
 
@@ -57,8 +62,15 @@
         border-radius: 7px;
         box-shadow: 0px 0px 5px 0px;
         
+        
     }
 
+    .headshot_pic{
+        padding:0;
+        max-width: 400px;
+        position: relative;
+        
+    }
     .git_btn{
         padding-top:8;
         padding-bottom:8;
@@ -86,9 +98,10 @@
     .maze_project,.image_man_project,.blackjack_project,.clear_cell_project
     ,.grid_click_project{
         display: grid;
-        grid-template-columns: 1fr 1fr;
-        column-gap: 100px;
+        grid-template-columns: 1fr .3fr;
+        column-gap: 5%;
         padding-bottom:50px;
+        justify-items: right;
     }
 
     .vid{
@@ -101,7 +114,7 @@
     }
 
     .description{
-        display:grid;
+        display: grid;
         
     }
 
@@ -123,6 +136,8 @@
     }
 
 
+
+
     </style>
     
 
@@ -130,28 +145,31 @@
     <body>
         
         <div class="header">
-            <div class="name">
-                <p>
-                    Andrew Morris
-                </p>
-            </div>
+            <div class="header_grid">
+                <div class="name">
+                    <p>
+                        Andrew Morris
+                    </p>
+                </div>
 
-            <div class="about">
-                <p>
-                    About
-                </p>
-            </div>
-            <div class="project">
-                <p>
-                    Projects
-                </p>
-            </div>
-            <div class="contact">
-                <p>
-                    Contact
-                </p>
-            </div>
+                
+                    <div class="header_about">
+                        <p class="header_about_text">
+                            About
+                        </p>
+                    </div>
+                    <div class="header_project">
+                        <p class="header_project_text">
+                            Projects
+                        </p>
+                    </div>
+                    <div class="header_contact">
+                        <p class="header_contact_text">
+                            Contact
+                    </div>
+                </div>
 
+            </div>
         </div>
         
         <div class="about_me">
@@ -173,7 +191,7 @@
                     </p>
                 </div>
 
-                <div>
+                <div class="headshot_pic">
                     <img class="headshot" src="pictures/head.png">
                 </div>
                 
@@ -204,7 +222,7 @@
                             </p>
                         </div>
                         <div class="view_code_div">
-                            <button class = "view_code_btn">
+                            <button class = "view_code_btn" onclick=" window.open('https://gitfront.io/r/user-3652926/xwgKMCH2qSJa/Graphs-and-Mazes/')">
                                 View Code
                             </button>
                         </div>
@@ -231,7 +249,7 @@
                             </p>
                         </div>
                         <div class="view_code_div">
-                            <button class = "view_code_btn">
+                            <button class = "view_code_btn" onclick=" window.open('https://gitfront.io/r/user-3652926/FwKDGAW9HSTf/Image-Manipulations/')">
                                 View Code
                             </button>
                         </div>
@@ -255,7 +273,7 @@
                         </div>
                         
                         <div class="view_code_div">
-                            <button class = "view_code_btn">
+                            <button class = "view_code_btn" onclick=" window.open('https://gitfront.io/r/user-3652926/NjvMX5LdTCkH/Java-BlackJack-gitfront/')">
                                 View Code
                             </button>
                         </div>
@@ -281,8 +299,8 @@
                         </div>
 
                         <div class="view_code_div">
-                            <button class = "view_code_btn">
-                                View Code
+                            <button class = "view_code_btn" onclick=" window.open('https://gitfront.io/r/user-3652926/oF1iMrneNomW/Clear-Cell-Game/')">
+                                Clear Cell Game
                             </button>
                         </div>
                     </div>
@@ -308,7 +326,7 @@
                             </p>
                         </div>
                         <div class="view_code_div">
-                            <button class = "view_code_btn">
+                            <button class = "view_code_btn" onclick=" window.open('https://gitfront.io/r/user-3652926/uTwXLyCoc6sG/Grid-Click-Game/')">
                                 View Code
                             </button>
                         </div>
