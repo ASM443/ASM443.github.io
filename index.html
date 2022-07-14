@@ -21,13 +21,16 @@
     .header{
         display: grid;
         grid-template-columns: 1fr .1fr .1fr .1fr;
-        padding-left: 200px;
-        padding-right: 200px;
+        margin-left: 200px;
+        margin-right: 200px;
         font-family: Roboto;
+        font-weight: bold;
     }
 
-    .header,.about,.project,.contact{
-        margin-right: 20px;
+    .about_me_title{
+        font-size: 40;
+        font-weight: bold;
+        
     }
     
     .about_me,.projects{
@@ -44,13 +47,15 @@
     .about_me_grid{
         display: grid;
         grid-template-columns: .75fr .25fr;
+        grid-gap: 50px;
+        font-size: 20;
 
     }
 
     .headshot{
         width: 300px;
         border-radius: 7px;
-        box-shadow: 0px 0px 10px 0px;
+        box-shadow: 0px 0px 5px 0px;
         
     }
 
@@ -65,11 +70,17 @@
 
     .projects_title{
         font-weight: bold;
-        font-size: 30;
+        font-size: 40;
+        margin-bottom:0;
+    }
+
+    .projects_subtitle{
+        margin-bottom:30;
     }
 
     .project_cards{
         margin-bottom: 40px;
+        font-size: 20;
     }
 
     .maze_project,.image_man_project,.blackjack_project,.clear_cell_project
@@ -81,7 +92,7 @@
     }
 
     .vid{
-        box-shadow: 0px 0px 10px 0px;
+        box-shadow: 0px 0px 5px 0px;
     }
 
     .card_title{
@@ -89,6 +100,27 @@
         font-size: 25;
     }
 
+    .description{
+        display:grid;
+        
+    }
+
+
+    .view_code_btn{
+        position: absolute; 
+        bottom: 0; 
+        padding-top:8;
+        padding-bottom:8;
+        padding-left:15;
+        padding-right:15;
+        background: black;
+        color: rgb(224, 221, 221);
+    }
+
+    .view_code_div{
+        position: relative; 
+        width: 200px; 
+    }
 
 
     </style>
@@ -125,7 +157,7 @@
         <div class="about_me">
             <div class="about_me_title">
                 <p>
-                    Hello
+                    Hello! I'm Andrew Morris, a software engineering student.
                 </p>
             </div>
             <div class="about_me_grid">
@@ -142,7 +174,7 @@
                 </div>
 
                 <div>
-                    <img class="headshot" src="pictures/me.jpg">
+                    <img class="headshot" src="pictures/head.png">
                 </div>
                 
             </div>
@@ -157,14 +189,26 @@
         
         <div class="projects">
             <p class="projects_title">Projects</p>
-            <p>Projects with visuals :</p>
+            <p class="projects_subtitle">Projects with visuals :</p>
 
-            <div type="card" class="project_cards">
-                <p class="card_title">DFS BFS Dijkstra's algorithm</p>
+            <div class="project_cards">
+                <p class="card_title">Maze solving with DFS, BFS, and Dijkstra's Algorithm</p>
                 <div class="maze_project">
-                    <p>
-                        This project implements a DFT BFT and Djstra on a maze.
-                    </p>
+                    <div class="description">
+                        <div>
+                            <p>
+                                First, a 2D grid is created to represent a maze. Based on a random generator a tile is either blank
+                                or a wall. Each tile stores the value of the surrounding tiles. Then, the user can select between depth-first,
+                                breath-first search, or Dijkstra's, algorithm. There isn't any noticeable difference at high speeds, but the 
+                                different methods become visible at slow speeds. This project was implemented in Java.
+                            </p>
+                        </div>
+                        <div class="view_code_div">
+                            <button class = "view_code_btn">
+                                View Code
+                            </button>
+                        </div>
+                    </div>
 
                     <div class="maze_video">
                         <video class="vid" width="620" controls autoplay loop>
@@ -174,12 +218,24 @@
                     </div>
                    
                 </div>
-
+                <p class="card_title">Image Manipulation</p>
                 <div class="image_man_project">
-                    <p>
-                        Description
-                    </p>
-
+                    <div class="description">
+                        <div>
+                            <p>
+                                First, an image is converted in to a 2D array filled with a custom RGB object. A new image is created by looping over 
+                                the array, modifying the RGB object and placing those new RGB objects into a new array. To change the color scheme of 
+                                a picture the corosponding RGB value is changed. To acheive the "censor" effect a pixel is selected then all surrounding 
+                                RGB values are set to the same value as inital pixel, this process repeats throughout the entire image. Similar methods 
+                                are used to create the other effects. This project was implemented in Java.
+                            </p>
+                        </div>
+                        <div class="view_code_div">
+                            <button class = "view_code_btn">
+                                View Code
+                            </button>
+                        </div>
+                    </div>
                     <div class="image_man_video">
                         <video class="vid" width="380" controls autoplay loop>
                             <source src="videos/image_editting.mp4" type="video/mp4">
@@ -188,12 +244,22 @@
                     </div>
 
                 </div>
-
+                <p class="card_title">Blackjack</p>
                 <div class="blackjack_project">
-                    <p>
-                        Description
-                    </p>
-
+                    <div class="description">
+                        <div>
+                            <p>
+                                Traditional blackjack where the user plays against a dealer. The user starts with $4,500 and can make a custom bet against
+                                the dealer. The dealer is set to only "hit" if they are below 16. This project was implemented in Java.
+                            </p>
+                        </div>
+                        
+                        <div class="view_code_div">
+                            <button class = "view_code_btn">
+                                View Code
+                            </button>
+                        </div>
+                    </div>
                     <div class="blackjack_video">
                         <video class="vid" width="952" controls autoplay loop>
                             <source src="videos/blackjack.mp4" type="video/mp4">
@@ -202,11 +268,24 @@
                     </div>
 
                 </div>
-
+                <p class="card_title">Clear Cell</p>
                 <div class="clear_cell_project">
-                    <p>
-                        Description
-                    </p>
+                    <div class="description">
+                        <div>
+                            <p>
+                                A fast pace clicker game. Before the game starts the user can select game the speed and board the size(not shown in the video). When a block is clicked 
+                                all surrounding blocks within 1 tile of the same color are cleared, while new blocks are continuously generated at the top. This project 
+                                was implemented in Java.
+                                
+                            </p>
+                        </div>
+
+                        <div class="view_code_div">
+                            <button class = "view_code_btn">
+                                View Code
+                            </button>
+                        </div>
+                    </div>
 
                     <div class="clear_cell_video">
                         <video class="vid" width="599" controls autoplay loop>
@@ -216,11 +295,24 @@
                     </div>
 
                 </div>
-
+                <p class="card_title">Grid Click</p>
                 <div class="grid_click_project">
-                    <p>
-                        Description
-                    </p>
+                    <div class="description">
+                        <div>
+                            <p>
+                                Another fast pace clicker game. Before the game starts the user can select the game speed and the board size(not shown in the video). The user 
+                                starts with a gird of black tiles. Then a green tile will randomly appear for a short duration, if the user clicks the tile while it's still 
+                                green it will stay green. If the user doesn't click the tile in time it will turn white. If the user clicks a tile that is black it will turn
+                                red. Only red, black, and white tile can turn green. This project was implemented in Java. 
+
+                            </p>
+                        </div>
+                        <div class="view_code_div">
+                            <button class = "view_code_btn">
+                                View Code
+                            </button>
+                        </div>
+                    </div>
 
                     <div class="grid_click_video">
                         <video class="vid" width="484" controls autoplay loop>
