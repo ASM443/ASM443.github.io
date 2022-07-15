@@ -108,10 +108,19 @@
     ,.grid_click_project{
         display: flex;
         column-gap: 5%;
-        padding-bottom:80px;
         justify-items: right;
+
     }
 
+    .project_border{
+
+        border-radius: 5px;
+        margin-bottom:80px;
+        padding: 10px;
+        background-color: rgba(185, 185, 179, 0.671);
+        justify-content: center;
+    }
+    
     .vid{
         box-shadow: 0px 0px 5px 0px;
     }
@@ -135,7 +144,7 @@
         padding-left:15;
         padding-right:15;
         background: black;
-        color: rgb(224, 221, 221);
+        color: white;
         cursor: pointer;
         display: inline-block;
     }
@@ -244,135 +253,155 @@
                 <p class="projects_subtitle">Projects with visuals :</p>
 
                 <div class="project_cards">
-                    <p class="card_title">Maze solving with DFS, BFS, and Dijkstra's Algorithm</p>
-                    <div class="maze_project">
-                        <div class="description">
-                            <div>
-                                <p>
-                                    First, a 2D grid is created to represent a maze. Based on a random generator a tile is either blank
-                                    or a wall. Each tile stores the value of the surrounding tiles. Then, the user can select between depth-first,
-                                    breath-first search, or Dijkstra's, algorithm. There isn't any noticeable difference at high speeds, but the 
-                                    different methods become visible at slow speeds. This project was implemented in Java.
-                                </p>
-                            </div>
-                            <div class="view_code_div">
-                                <button class = "view_code_btn" onclick=" window.open('https://gitfront.io/r/user-3652926/xwgKMCH2qSJa/Graphs-and-Mazes/')">
-                                    View Code
-                                </button>
-                            </div>
-                        </div>
 
-                        <div class="maze_video">
-                            <video class="vid" width="620" preload="auto" controls autoplay loop muted>
-                                <source src="videos/maze.mp4" type="video/mp4">
-                                <source src="movie.ogg" type="video/ogg">
-                            </video>
-                        </div>
-                    
-                    </div>
-                    <p class="card_title">Image Manipulation</p>
-                    <div class="image_man_project">
-                        <div class="description">
-                            <div>
-                                <p>
-                                    First, an image is converted in to a 2D array filled with a custom RGB object. A new image is created by looping over 
-                                    the array, modifying the RGB object and placing those new RGB objects into a new array. To change the color scheme of 
-                                    a picture the corosponding RGB value is changed. To acheive the "censor" effect a pixel is selected then all surrounding 
-                                    RGB values are set to the same value as inital pixel, this process repeats throughout the entire image. Similar methods 
-                                    are used to create the other effects. This project was implemented in Java.
-                                </p>
-                            </div>
-                            <div class="view_code_div">
-                                <button class = "view_code_btn" onclick=" window.open('https://gitfront.io/r/user-3652926/FwKDGAW9HSTf/Image-Manipulations/')">
-                                    View Code
-                                </button>
-                            </div>
-                        </div>
-                        <div class="image_man_video">
-                            <video class="vid" width="380" controls autoplay loop muted>
-                                <source src="videos/image_editting.mp4" type="video/mp4">
-                                <source src="movie.ogg" type="video/ogg">
-                            </video>
-                        </div>
+                    <div class="project_border">
 
-                    </div>
-                    <p class="card_title">Blackjack</p>
-                    <div class="blackjack_project">
-                        <div class="description">
-                            <div>
-                                <p>
-                                    Traditional blackjack where the user plays against a dealer. The user starts with $4,500 and can make a custom bet against
-                                    the dealer. The dealer is set to only "hit" if they are below 16. This project was implemented in Java.
-                                </p>
+                        <p class="card_title">Maze solving with DFS, BFS, and Dijkstra's Algorithm</p>
+                        <div class="maze_project">
+                            <div class="description">
+                                <div>
+                                    <p>
+                                        First, a 2D grid is created to represent a maze. Based on a random generator a tile is either blank
+                                        or a wall. Each tile stores the value of the surrounding tiles. Then, the user can select between depth-first,
+                                        breath-first search, or Dijkstra's, algorithm. There isn't any noticeable difference at high speeds, but the 
+                                        different methods become visible at slow speeds. This project was implemented in Java.
+                                    </p>
+                                </div>
+                                <div class="view_code_div">
+                                    <button class = "view_code_btn" onclick=" window.open('https://gitfront.io/r/user-3652926/xwgKMCH2qSJa/Graphs-and-Mazes/')">
+                                        View Code
+                                    </button>
+                                </div>
                             </div>
-                            
-                            <div class="view_code_div">
-                                <button class = "view_code_btn" onclick=" window.open('https://gitfront.io/r/user-3652926/NjvMX5LdTCkH/Java-BlackJack-gitfront/')">
-                                    View Code
-                                </button>
+
+                            <div class="maze_video">
+                                <video class="vid" width="620" preload="auto" controls autoplay loop muted>
+                                    <source src="videos/maze.mp4" type="video/mp4">
+                                    <source src="movie.ogg" type="video/ogg">
+                                </video>
                             </div>
+                        
                         </div>
-                        <div class="blackjack_video">
-                            <video class="vid" width="952" controls autoplay loop muted>
-                                <source src="videos/blackjack.mp4" type="video/mp4">
-                                <source src="movie.ogg" type="video/ogg">
-                            </video>
+                    </div>
+
+
+                    <div class="project_border">
+                        <p class="card_title">Image Manipulation</p>
+                        <div class="image_man_project">
+                            <div class="description">
+                                <div>
+                                    <p>
+                                        First, an image is converted in to a 2D array filled with a custom RGB object. A new image is created by looping over 
+                                        the array, modifying the RGB object and placing those new RGB objects into a new array. To change the color scheme of 
+                                        a picture the corosponding RGB value is changed. To acheive the "censor" effect a pixel is selected then all surrounding 
+                                        RGB values are set to the same value as inital pixel, this process repeats throughout the entire image. Similar methods 
+                                        are used to create the other effects. This project was implemented in Java.
+                                    </p>
+                                </div>
+                                <div class="view_code_div">
+                                    <button class = "view_code_btn" onclick=" window.open('https://gitfront.io/r/user-3652926/FwKDGAW9HSTf/Image-Manipulations/')">
+                                        View Code
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="image_man_video">
+                                <video class="vid" width="380" controls autoplay loop muted>
+                                    <source src="videos/image_editting.mp4" type="video/mp4">
+                                    <source src="movie.ogg" type="video/ogg">
+                                </video>
+                            </div>
+
                         </div>
 
                     </div>
-                    <p class="card_title">Clear Cell</p>
-                    <div class="clear_cell_project">
-                        <div class="description">
-                            <div>
-                                <p>
-                                    A fast pace clicker game. Before the game starts the user can select game the speed and board the size(not shown in the video). When a block is clicked 
-                                    all surrounding blocks within 1 tile of the same color are cleared, while new blocks are continuously generated at the top. This project 
-                                    was implemented in Java.
-                                    
-                                </p>
+
+                    <div class="project_border">
+                        <p class="card_title">Blackjack</p>
+                        <div class="blackjack_project">
+                            <div class="description">
+                                <div>
+                                    <p>
+                                        Traditional blackjack where the user plays against a dealer. The user starts with $4,500 and can make a custom bet against
+                                        the dealer. The dealer is set to only "hit" if they are below 16. This project was implemented in Java.
+                                    </p>
+                                </div>
+                                
+                                <div class="view_code_div">
+                                    <button class = "view_code_btn" onclick=" window.open('https://gitfront.io/r/user-3652926/NjvMX5LdTCkH/Java-BlackJack-gitfront/')">
+                                        View Code
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="blackjack_video">
+                                <video class="vid" width="952" controls autoplay loop muted>
+                                    <source src="videos/blackjack.mp4" type="video/mp4">
+                                    <source src="movie.ogg" type="video/ogg">
+                                </video>
                             </div>
 
-                            <div class="view_code_div">
-                                <button class = "view_code_btn" onclick=" window.open('https://gitfront.io/r/user-3652926/oF1iMrneNomW/Clear-Cell-Game/')">
-                                    Clear Cell Game
-                                </button>
-                            </div>
                         </div>
-
-                        <div class="clear_cell_video">
-                            <video class="vid" width="599" controls autoplay loop muted>
-                                <source src="videos/cell_clear.mp4" type="video/mp4">
-                                <source src="movie.ogg" type="video/ogg">
-                            </video>
-                        </div>
-
                     </div>
-                    <p class="card_title">Grid Click</p>
-                    <div class="grid_click_project">
-                        <div class="description">
-                            <div>
-                                <p>
-                                    Another fast pace clicker game. Before the game starts the user can select the game speed and the board size(not shown in the video). The user 
-                                    starts with a gird of black tiles. Then a green tile will randomly appear for a short duration, if the user clicks the tile while it's still 
-                                    green it will stay green. If the user doesn't click the tile in time it will turn white. If the user clicks a tile that is black it will turn
-                                    red. Only red, black, and white tile can turn green. This project was implemented in Java. 
 
-                                </p>
+
+                    <div class="project_border">   
+                        <p class="card_title">Clear Cell</p>
+                        <div class="clear_cell_project">
+                            <div class="description">
+                                <div>
+                                    <p>
+                                        A fast pace clicker game. Before the game starts the user can select game the speed and board the size(not shown in the video). When a block is clicked 
+                                        all surrounding blocks within 1 tile of the same color are cleared, while new blocks are continuously generated at the top. This project 
+                                        was implemented in Java.
+                                        
+                                    </p>
+                                </div>
+
+                                <div class="view_code_div">
+                                    <button class = "view_code_btn" onclick=" window.open('https://gitfront.io/r/user-3652926/oF1iMrneNomW/Clear-Cell-Game/')">
+                                        View Code
+                                    </button>
+                                </div>
                             </div>
-                            <div class="view_code_div">
-                                <button class = "view_code_btn" onclick=" window.open('https://gitfront.io/r/user-3652926/uTwXLyCoc6sG/Grid-Click-Game/')">
-                                    View Code
-                                </button>
+
+                            <div class="clear_cell_video">
+                                <video class="vid" width="599" controls autoplay loop muted>
+                                    <source src="videos/cell_clear.mp4" type="video/mp4">
+                                    <source src="movie.ogg" type="video/ogg">
+                                </video>
                             </div>
-                        </div>
 
-                        <div class="grid_click_video">
-                            <video class="vid" width="484" controls autoplay loop mutedmuted>
-                                <source src="videos/grid click.mp4" type="video/mp4">
-                                <source src="movie.ogg" type="video/ogg">
-                            </video>
                         </div>
+                    </div>
 
+
+                    <div class="project_border">
+                        <p class="card_title">Grid Click</p>
+                        <div class="grid_click_project">
+                            <div class="description">
+                                <div>
+                                    <p>
+                                        Another fast pace clicker game. Before the game starts the user can select the game speed and the board size(not shown in the video). The user 
+                                        starts with a gird of black tiles. Then a green tile will randomly appear for a short duration, if the user clicks the tile while it's still 
+                                        green it will stay green. If the user doesn't click the tile in time it will turn white. If the user clicks a tile that is black it will turn
+                                        red. Only red, black, and white tile can turn green. This project was implemented in Java. 
+
+                                    </p>
+                                </div>
+                                <div class="view_code_div">
+                                    <button class = "view_code_btn" onclick=" window.open('https://gitfront.io/r/user-3652926/uTwXLyCoc6sG/Grid-Click-Game/')">
+                                        View Code
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="grid_click_video">
+                                <video class="vid" width="484" controls autoplay loop mutedmuted>
+                                    <source src="videos/grid click.mp4" type="video/mp4">
+                                    <source src="movie.ogg" type="video/ogg">
+                                </video>
+                            </div>
+
+                        </div>
                     </div>
                 </div>
             </div>
