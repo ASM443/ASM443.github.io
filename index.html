@@ -32,6 +32,7 @@
         padding:0; 
     }
 
+
     .header_about_text, .header_project_text, .header_contact_text{
         justify-items: right;
         align-items: right;
@@ -49,8 +50,7 @@
     }
 
     .about_me_grid{
-        display: grid;
-        grid-template-columns: .8fr .2fr;
+        display: flex;
         grid-gap: 5%;
         font-size: 20;
         justify-items: right;
@@ -78,6 +78,7 @@
         padding-right:15;
         background: black;
         color: rgb(224, 221, 221);
+        cursor: pointer;
     }
 
     .projects_title{
@@ -97,10 +98,9 @@
 
     .maze_project,.image_man_project,.blackjack_project,.clear_cell_project
     ,.grid_click_project{
-        display: grid;
-        grid-template-columns: 1fr .3fr;
+        display: flex;
         column-gap: 5%;
-        padding-bottom:50px;
+        padding-bottom:80px;
         justify-items: right;
     }
 
@@ -128,6 +128,7 @@
         padding-right:15;
         background: black;
         color: rgb(224, 221, 221);
+        cursor: pointer;
     }
 
     .view_code_div{
@@ -148,7 +149,7 @@
             <div class="header_grid">
                 <div class="name">
                     <p>
-                        Andrew Morris
+                        ANDREW MORRIS
                     </p>
                 </div>
 
@@ -175,19 +176,27 @@
         <div class="about_me">
             <div class="about_me_title">
                 <p>
-                    Hello! I'm Andrew Morris, a software engineering student.
+                    Hello! I'm Andrew, a software engineering student.
                 </p>
             </div>
             <div class="about_me_grid">
                 
                 <div class="about_me_text">
                     <p>
-                        Hello and welcome to amorris.io this website
-                        services as an online portfolio. My name is Andrew 
-                        Morris, I am current an Information Science
-                        major of University of Maryland, College Park,
-                        I also have an Associate of Science degree from
-                        Howard Community College.
+                        I love building and working with tools. The infinite speed, scalability, and utilzilty found
+                        within modern computing system is what drew me into software engineering.
+                    </p>
+                    <p>
+                        I am currently a student at the University of Maryland, College Park studying Information Science.
+                        While at UMD I've worked on several projects in Java, C, Ruby, OCaml, and MySQL. I've worked on
+                        multithread, concurrent, and distributed programming in Java with modern technologies such as Akka 
+                        and Hadoop. I also made a programming language with a custom lexer, parser, and interpreter, 
+                        compiled with OCaml. As well as a few programs in C, ruby, and MIPS assembly. Currently I'm working on web 
+                        development projects, the first being this website. All previous and current projects are below.
+                        
+                    </p>
+                    <p>
+                        I am currently an internship as a developer.
                     </p>
                 </div>
 
