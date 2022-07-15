@@ -11,13 +11,14 @@
     
     <style>
     
+
     p,button {
     font-family: Roboto;
-
+    
     }
 
 
-    .header, .about_me, .projects{
+    .header, .about_me, .projects, .contact{
         margin-left: 7%;
         margin-right: 7%;
         margin-top: auto;
@@ -25,21 +26,28 @@
     }
 
     .header_grid{
-        display: grid;
-        grid-template-columns: 1fr .1fr .1fr .1fr;
+        display: flex;      
         font-family: Roboto;
         font-weight: bold;
-        padding:0; 
+        padding:0;
+        justify-content:space-between;
+        
     }
 
 
-    .header_about_text, .header_project_text, .header_contact_text{
+    .name{
+        flex:.8;
+    }
+
+
+    .header_about_text, .header_project_text, .header_contact_text, a{
         justify-items: right;
-        align-items: right;
         text-align: right;
+        color: black;
+        text-decoration:none;
     }
 
-    .about_me_title{
+    .about_me_title, .contact_title{
         font-size: 40;
         font-weight: bold;
         
@@ -115,7 +123,7 @@
 
     .description{
         display: grid;
-        
+          
     }
 
 
@@ -129,6 +137,7 @@
         background: black;
         color: rgb(224, 221, 221);
         cursor: pointer;
+        display: inline-block;
     }
 
     .view_code_div{
@@ -136,6 +145,9 @@
         width: 200px; 
     }
 
+    .contact{
+        margin-top: 50px;
+    }
 
 
 
@@ -152,208 +164,235 @@
                         ANDREW MORRIS
                     </p>
                 </div>
-
                 
-                    <div class="header_about">
-                        <p class="header_about_text">
-                            About
-                        </p>
-                    </div>
-                    <div class="header_project">
-                        <p class="header_project_text">
-                            Projects
-                        </p>
-                    </div>
-                    <div class="header_contact">
-                        <p class="header_contact_text">
-                            Contact
-                    </div>
-                </div>
+                    <a href="#about">
+                        <div class="header_about">
+                            <p class="header_about_text">
+                                About
+                            </p>
+                        </div>
+                    </a>
+                
+                    
+                    <a href="#projects">
+                        <div class="header_project">
+                            <p class="header_project_text">
+                                Projects
+                            </p>
+                        </div>
+                    </a>
+
+
+
+                   <a href="#contact">
+                        <div class="header_contact">
+                            <p class="header_contact_text">
+                                Contact
+                        </div>
+                   </a>
+
+
 
             </div>
         </div>
+
+        <secton id="about">
+            <div class="about_me">
+                <div class="about_me_title">
+                    <p>
+                        Hello! I'm Andrew, a software engineering student.
+                    </p>
+                </div>
+                <div class="about_me_grid">
+                    
+                    <div class="about_me_text">
+                        <p>
+                            I love building and working with tools. The infinite speed, scalability, and utilzilty found
+                            within modern computing system is what drew me into software engineering.
+                        </p>
+                        <p>
+                            I am currently a student at the University of Maryland, College Park studying Information Science.
+                            While at UMD I've worked on several projects in Java, C, Ruby, OCaml, and MySQL. I've worked on
+                            multithread, concurrent, and distributed programming in Java with modern technologies such as Akka 
+                            and Hadoop. I also made a programming language with a custom lexer, parser, and interpreter, 
+                            compiled with OCaml. As well as a few programs in C, ruby, and MIPS assembly. Currently I'm working on web 
+                            development projects, the first being this website. All previous and current projects are below.
+                            
+                        </p>
+                        <p>
+                            I am currently looking for an internship as a soft developer.
+                        </p>
+                    </div>
+
+                    <div class="headshot_pic">
+                        <img class="headshot" src="pictures/head.png">
+                    </div>
+                    
+                </div>
+
+                <div class="github_link">
+                    <button class="git_btn">
+                        View Github
+                    </button>
+                </div>
+            </div>
+        </secton>
         
-        <div class="about_me">
-            <div class="about_me_title">
+        <section id="projects">
+            <div class="projects">
+                <p class="projects_title">Projects</p>
+                <p class="projects_subtitle">Projects with visuals :</p>
+
+                <div class="project_cards">
+                    <p class="card_title">Maze solving with DFS, BFS, and Dijkstra's Algorithm</p>
+                    <div class="maze_project">
+                        <div class="description">
+                            <div>
+                                <p>
+                                    First, a 2D grid is created to represent a maze. Based on a random generator a tile is either blank
+                                    or a wall. Each tile stores the value of the surrounding tiles. Then, the user can select between depth-first,
+                                    breath-first search, or Dijkstra's, algorithm. There isn't any noticeable difference at high speeds, but the 
+                                    different methods become visible at slow speeds. This project was implemented in Java.
+                                </p>
+                            </div>
+                            <div class="view_code_div">
+                                <button class = "view_code_btn" onclick=" window.open('https://gitfront.io/r/user-3652926/xwgKMCH2qSJa/Graphs-and-Mazes/')">
+                                    View Code
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="maze_video">
+                            <video class="vid" width="620" preload="auto" controls autoplay loop>
+                                <source src="videos/maze.mp4" type="video/mp4">
+                                <source src="movie.ogg" type="video/ogg">
+                            </video>
+                        </div>
+                    
+                    </div>
+                    <p class="card_title">Image Manipulation</p>
+                    <div class="image_man_project">
+                        <div class="description">
+                            <div>
+                                <p>
+                                    First, an image is converted in to a 2D array filled with a custom RGB object. A new image is created by looping over 
+                                    the array, modifying the RGB object and placing those new RGB objects into a new array. To change the color scheme of 
+                                    a picture the corosponding RGB value is changed. To acheive the "censor" effect a pixel is selected then all surrounding 
+                                    RGB values are set to the same value as inital pixel, this process repeats throughout the entire image. Similar methods 
+                                    are used to create the other effects. This project was implemented in Java.
+                                </p>
+                            </div>
+                            <div class="view_code_div">
+                                <button class = "view_code_btn" onclick=" window.open('https://gitfront.io/r/user-3652926/FwKDGAW9HSTf/Image-Manipulations/')">
+                                    View Code
+                                </button>
+                            </div>
+                        </div>
+                        <div class="image_man_video">
+                            <video class="vid" width="380" controls autoplay loop>
+                                <source src="videos/image_editting.mp4" type="video/mp4">
+                                <source src="movie.ogg" type="video/ogg">
+                            </video>
+                        </div>
+
+                    </div>
+                    <p class="card_title">Blackjack</p>
+                    <div class="blackjack_project">
+                        <div class="description">
+                            <div>
+                                <p>
+                                    Traditional blackjack where the user plays against a dealer. The user starts with $4,500 and can make a custom bet against
+                                    the dealer. The dealer is set to only "hit" if they are below 16. This project was implemented in Java.
+                                </p>
+                            </div>
+                            
+                            <div class="view_code_div">
+                                <button class = "view_code_btn" onclick=" window.open('https://gitfront.io/r/user-3652926/NjvMX5LdTCkH/Java-BlackJack-gitfront/')">
+                                    View Code
+                                </button>
+                            </div>
+                        </div>
+                        <div class="blackjack_video">
+                            <video class="vid" width="952" controls autoplay loop>
+                                <source src="videos/blackjack.mp4" type="video/mp4">
+                                <source src="movie.ogg" type="video/ogg">
+                            </video>
+                        </div>
+
+                    </div>
+                    <p class="card_title">Clear Cell</p>
+                    <div class="clear_cell_project">
+                        <div class="description">
+                            <div>
+                                <p>
+                                    A fast pace clicker game. Before the game starts the user can select game the speed and board the size(not shown in the video). When a block is clicked 
+                                    all surrounding blocks within 1 tile of the same color are cleared, while new blocks are continuously generated at the top. This project 
+                                    was implemented in Java.
+                                    
+                                </p>
+                            </div>
+
+                            <div class="view_code_div">
+                                <button class = "view_code_btn" onclick=" window.open('https://gitfront.io/r/user-3652926/oF1iMrneNomW/Clear-Cell-Game/')">
+                                    Clear Cell Game
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="clear_cell_video">
+                            <video class="vid" width="599" controls autoplay loop>
+                                <source src="videos/cell_clear.mp4" type="video/mp4">
+                                <source src="movie.ogg" type="video/ogg">
+                            </video>
+                        </div>
+
+                    </div>
+                    <p class="card_title">Grid Click</p>
+                    <div class="grid_click_project">
+                        <div class="description">
+                            <div>
+                                <p>
+                                    Another fast pace clicker game. Before the game starts the user can select the game speed and the board size(not shown in the video). The user 
+                                    starts with a gird of black tiles. Then a green tile will randomly appear for a short duration, if the user clicks the tile while it's still 
+                                    green it will stay green. If the user doesn't click the tile in time it will turn white. If the user clicks a tile that is black it will turn
+                                    red. Only red, black, and white tile can turn green. This project was implemented in Java. 
+
+                                </p>
+                            </div>
+                            <div class="view_code_div">
+                                <button class = "view_code_btn" onclick=" window.open('https://gitfront.io/r/user-3652926/uTwXLyCoc6sG/Grid-Click-Game/')">
+                                    View Code
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="grid_click_video">
+                            <video class="vid" width="484" controls autoplay loop>
+                                <source src="videos/grid click.mp4" type="video/mp4">
+                                <source src="movie.ogg" type="video/ogg">
+                            </video>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="contact">
+            <div class="contact">
+                <div class="contact_title">
+                    <p>
+                        Contact
+                    </p>
+                </div>
+
                 <p>
-                    Hello! I'm Andrew, a software engineering student.
+                    The best way to contact me is through email <a href="mailto:andrewmorris04@gmail.com">andrewmorris04@gmail.com</a>
                 </p>
+
             </div>
-            <div class="about_me_grid">
-                
-                <div class="about_me_text">
-                    <p>
-                        I love building and working with tools. The infinite speed, scalability, and utilzilty found
-                        within modern computing system is what drew me into software engineering.
-                    </p>
-                    <p>
-                        I am currently a student at the University of Maryland, College Park studying Information Science.
-                        While at UMD I've worked on several projects in Java, C, Ruby, OCaml, and MySQL. I've worked on
-                        multithread, concurrent, and distributed programming in Java with modern technologies such as Akka 
-                        and Hadoop. I also made a programming language with a custom lexer, parser, and interpreter, 
-                        compiled with OCaml. As well as a few programs in C, ruby, and MIPS assembly. Currently I'm working on web 
-                        development projects, the first being this website. All previous and current projects are below.
-                        
-                    </p>
-                    <p>
-                        I am currently an internship as a developer.
-                    </p>
-                </div>
-
-                <div class="headshot_pic">
-                    <img class="headshot" src="pictures/head.png">
-                </div>
-                
-            </div>
-
-            <div class="github_link">
-                <button class="git_btn">
-                    View Github
-                </button>
-            </div>
-        </div>
-    
-        
-        <div class="projects">
-            <p class="projects_title">Projects</p>
-            <p class="projects_subtitle">Projects with visuals :</p>
-
-            <div class="project_cards">
-                <p class="card_title">Maze solving with DFS, BFS, and Dijkstra's Algorithm</p>
-                <div class="maze_project">
-                    <div class="description">
-                        <div>
-                            <p>
-                                First, a 2D grid is created to represent a maze. Based on a random generator a tile is either blank
-                                or a wall. Each tile stores the value of the surrounding tiles. Then, the user can select between depth-first,
-                                breath-first search, or Dijkstra's, algorithm. There isn't any noticeable difference at high speeds, but the 
-                                different methods become visible at slow speeds. This project was implemented in Java.
-                            </p>
-                        </div>
-                        <div class="view_code_div">
-                            <button class = "view_code_btn" onclick=" window.open('https://gitfront.io/r/user-3652926/xwgKMCH2qSJa/Graphs-and-Mazes/')">
-                                View Code
-                            </button>
-                        </div>
-                    </div>
-
-                    <div class="maze_video">
-                        <video class="vid" width="620" controls autoplay loop>
-                            <source src="videos/maze.mp4" type="video/mp4">
-                            <source src="movie.ogg" type="video/ogg">
-                        </video>
-                    </div>
-                   
-                </div>
-                <p class="card_title">Image Manipulation</p>
-                <div class="image_man_project">
-                    <div class="description">
-                        <div>
-                            <p>
-                                First, an image is converted in to a 2D array filled with a custom RGB object. A new image is created by looping over 
-                                the array, modifying the RGB object and placing those new RGB objects into a new array. To change the color scheme of 
-                                a picture the corosponding RGB value is changed. To acheive the "censor" effect a pixel is selected then all surrounding 
-                                RGB values are set to the same value as inital pixel, this process repeats throughout the entire image. Similar methods 
-                                are used to create the other effects. This project was implemented in Java.
-                            </p>
-                        </div>
-                        <div class="view_code_div">
-                            <button class = "view_code_btn" onclick=" window.open('https://gitfront.io/r/user-3652926/FwKDGAW9HSTf/Image-Manipulations/')">
-                                View Code
-                            </button>
-                        </div>
-                    </div>
-                    <div class="image_man_video">
-                        <video class="vid" width="380" controls autoplay loop>
-                            <source src="videos/image_editting.mp4" type="video/mp4">
-                            <source src="movie.ogg" type="video/ogg">
-                        </video>
-                    </div>
-
-                </div>
-                <p class="card_title">Blackjack</p>
-                <div class="blackjack_project">
-                    <div class="description">
-                        <div>
-                            <p>
-                                Traditional blackjack where the user plays against a dealer. The user starts with $4,500 and can make a custom bet against
-                                the dealer. The dealer is set to only "hit" if they are below 16. This project was implemented in Java.
-                            </p>
-                        </div>
-                        
-                        <div class="view_code_div">
-                            <button class = "view_code_btn" onclick=" window.open('https://gitfront.io/r/user-3652926/NjvMX5LdTCkH/Java-BlackJack-gitfront/')">
-                                View Code
-                            </button>
-                        </div>
-                    </div>
-                    <div class="blackjack_video">
-                        <video class="vid" width="952" controls autoplay loop>
-                            <source src="videos/blackjack.mp4" type="video/mp4">
-                            <source src="movie.ogg" type="video/ogg">
-                        </video>
-                    </div>
-
-                </div>
-                <p class="card_title">Clear Cell</p>
-                <div class="clear_cell_project">
-                    <div class="description">
-                        <div>
-                            <p>
-                                A fast pace clicker game. Before the game starts the user can select game the speed and board the size(not shown in the video). When a block is clicked 
-                                all surrounding blocks within 1 tile of the same color are cleared, while new blocks are continuously generated at the top. This project 
-                                was implemented in Java.
-                                
-                            </p>
-                        </div>
-
-                        <div class="view_code_div">
-                            <button class = "view_code_btn" onclick=" window.open('https://gitfront.io/r/user-3652926/oF1iMrneNomW/Clear-Cell-Game/')">
-                                Clear Cell Game
-                            </button>
-                        </div>
-                    </div>
-
-                    <div class="clear_cell_video">
-                        <video class="vid" width="599" controls autoplay loop>
-                            <source src="videos/cell_clear.mp4" type="video/mp4">
-                            <source src="movie.ogg" type="video/ogg">
-                        </video>
-                    </div>
-
-                </div>
-                <p class="card_title">Grid Click</p>
-                <div class="grid_click_project">
-                    <div class="description">
-                        <div>
-                            <p>
-                                Another fast pace clicker game. Before the game starts the user can select the game speed and the board size(not shown in the video). The user 
-                                starts with a gird of black tiles. Then a green tile will randomly appear for a short duration, if the user clicks the tile while it's still 
-                                green it will stay green. If the user doesn't click the tile in time it will turn white. If the user clicks a tile that is black it will turn
-                                red. Only red, black, and white tile can turn green. This project was implemented in Java. 
-
-                            </p>
-                        </div>
-                        <div class="view_code_div">
-                            <button class = "view_code_btn" onclick=" window.open('https://gitfront.io/r/user-3652926/uTwXLyCoc6sG/Grid-Click-Game/')">
-                                View Code
-                            </button>
-                        </div>
-                    </div>
-
-                    <div class="grid_click_video">
-                        <video class="vid" width="484" controls autoplay loop>
-                            <source src="videos/grid click.mp4" type="video/mp4">
-                            <source src="movie.ogg" type="video/ogg">
-                        </video>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-
-
-
+        </section>
         
     </body>
 </html>   
