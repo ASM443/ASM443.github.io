@@ -1,3 +1,4 @@
+
 <html>   
     <head>
         <title>Andrew M. Resume</title>
@@ -69,8 +70,6 @@
         width: 300px;
         border-radius: 7px;
         box-shadow: 0px 0px 5px 0px;
-        
-        
     }
 
     .headshot_pic{
@@ -79,6 +78,7 @@
         position: relative;
         
     }
+    
     .git_btn{
         padding-top:8;
         padding-bottom:8;
@@ -123,22 +123,28 @@
     
     .vid{
         box-shadow: 0px 0px 5px 0px;
+        flex:2;
+        width: 100%;
     }
 
     .card_title{
-        
+        font-weight: bold;
         font-size: 25;
     }
 
     .description{
         display: grid;
-          
+        flex-direction: column;
+        flex:1;
+        
     }
 
 
     .view_code_btn{
+        
         position: absolute; 
         bottom: 0; 
+        
         padding-top:8;
         padding-bottom:8;
         padding-left:15;
@@ -146,7 +152,7 @@
         background: black;
         color: white;
         cursor: pointer;
-        display: inline-block;
+        
     }
 
     .view_code_div{
@@ -157,7 +163,6 @@
     .contact{
         margin-top: 50px;
     }
-
 
 
     </style>
@@ -217,7 +222,7 @@
                     <div class="about_me_text">
                         <p>
                             I love building and working with tools. The infinite speed, scalability, and utilzilty found
-                            within modern computing system is what drew me into software engineering.
+                            within modern computing systems is what drew me into software engineering.
                         </p>
                         <p>
                             I am currently a student at the University of Maryland, College Park studying Information Science.
@@ -225,7 +230,7 @@
                             multithread, concurrent, and distributed programming in Java with modern technologies such as Akka 
                             and Hadoop. I also made a programming language with a custom lexer, parser, and interpreter, 
                             compiled with OCaml. As well as a few programs in C, ruby, and MIPS assembly. Currently I'm working on web 
-                            development projects, the first being this website. All previous and current projects are below.
+                            development projects, the first being this website. All previous and current projects will be added are below.
                             
                         </p>
                         <p>
@@ -268,7 +273,7 @@
                                     </p>
                                 </div>
                                 <div class="view_code_div">
-                                    <button class = "view_code_btn" onclick=" window.open('https://gitfront.io/r/user-3652926/xwgKMCH2qSJa/Graphs-and-Mazes/')">
+                                    <button class = "view_code_btn" onclick="window.open('https://gitfront.io/r/user-3652926/xwgKMCH2qSJa/Graphs-and-Mazes/')">
                                         View Code
                                     </button>
                                 </div>
@@ -293,13 +298,13 @@
                                     <p>
                                         First, an image is converted in to a 2D array filled with a custom RGB object. A new image is created by looping over 
                                         the array, modifying the RGB object and placing those new RGB objects into a new array. To change the color scheme of 
-                                        a picture the corosponding RGB value is changed. To acheive the "censor" effect a pixel is selected then all surrounding 
+                                        a picture the corresponding RGB value is changed. To acheive the "censor" effect a pixel is selected then all surrounding 
                                         RGB values are set to the same value as inital pixel, this process repeats throughout the entire image. Similar methods 
                                         are used to create the other effects. This project was implemented in Java.
                                     </p>
                                 </div>
                                 <div class="view_code_div">
-                                    <button class = "view_code_btn" onclick=" window.open('https://gitfront.io/r/user-3652926/FwKDGAW9HSTf/Image-Manipulations/')">
+                                    <button class = "view_code_btn" onclick="window.open('https://gitfront.io/r/user-3652926/FwKDGAW9HSTf/Image-Manipulations/')">
                                         View Code
                                     </button>
                                 </div>
@@ -321,19 +326,20 @@
                             <div class="description">
                                 <div>
                                     <p>
-                                        Traditional blackjack where the user plays against a dealer. The user starts with $4,500 and can make a custom bet against
+                                        Traditional blackjack where the user plays against a dealer. The player starts with $4,500 and can make a custom bet against
                                         the dealer. The dealer is set to only "hit" if they are below 16. This project was implemented in Java.
                                     </p>
                                 </div>
                                 
                                 <div class="view_code_div">
-                                    <button class = "view_code_btn" onclick=" window.open('https://gitfront.io/r/user-3652926/NjvMX5LdTCkH/Java-BlackJack-gitfront/')">
+                                    <button class = "view_code_btn" onclick="window.open('https://gitfront.io/r/user-3652926/NjvMX5LdTCkH/Java-BlackJack-gitfront/')">
                                         View Code
                                     </button>
                                 </div>
                             </div>
                             <div class="blackjack_video">
                                 <video class="vid" width="952" controls autoplay loop muted>
+                                    
                                     <source src="videos/blackjack.mp4" type="video/mp4">
                                     <source src="movie.ogg" type="video/ogg">
                                 </video>
@@ -349,7 +355,7 @@
                             <div class="description">
                                 <div>
                                     <p>
-                                        A fast pace clicker game. Before the game starts the user can select game the speed and board the size(not shown in the video). When a block is clicked 
+                                        A fast pace clicker game. Before the game starts the user can select the game speed and board the size(not shown in the video). When a block is clicked 
                                         all surrounding blocks within 1 tile of the same color are cleared, while new blocks are continuously generated at the top. This project 
                                         was implemented in Java.
                                         
@@ -357,7 +363,7 @@
                                 </div>
 
                                 <div class="view_code_div">
-                                    <button class = "view_code_btn" onclick=" window.open('https://gitfront.io/r/user-3652926/oF1iMrneNomW/Clear-Cell-Game/')">
+                                    <button class = "view_code_btn" onclick="window.open('https://gitfront.io/r/user-3652926/oF1iMrneNomW/Clear-Cell-Game/')">
                                         View Code
                                     </button>
                                 </div>
@@ -388,14 +394,14 @@
                                     </p>
                                 </div>
                                 <div class="view_code_div">
-                                    <button class = "view_code_btn" onclick=" window.open('https://gitfront.io/r/user-3652926/uTwXLyCoc6sG/Grid-Click-Game/')">
+                                    <button class = "view_code_btn" onclick="window.open('https://gitfront.io/r/user-3652926/uTwXLyCoc6sG/Grid-Click-Game/')">
                                         View Code
                                     </button>
                                 </div>
                             </div>
 
                             <div class="grid_click_video">
-                                <video class="vid" width="484" controls autoplay loop mutedmuted>
+                                <video class="vid" width="484" controls autoplay loop muted>
                                     <source src="videos/grid click.mp4" type="video/mp4">
                                     <source src="movie.ogg" type="video/ogg">
                                 </video>
