@@ -1,11 +1,15 @@
 
-<html>   
+<html lang="en">   
     <head>
         <title>Andrew M. Resume</title>
 
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script defer src="app.js"></script>
     </head>
     
     <style>
@@ -163,6 +167,16 @@
         margin-top: 50px;
     }
 
+    .hidden {
+        opacity: 0;
+        transition: all 1s;
+    }
+
+    .show {
+        opacity: 1;
+        transition: all 1s;
+    }
+
 
     </style>
     
@@ -209,7 +223,7 @@
             </div>
         </div>
 
-        <secton id="about">
+        <secton class="about hidden">
             <div class="about_me">
                 <div class="about_me_title">
                     <p>
@@ -260,7 +274,7 @@
 
                 <div class="project_cards">
 
-                    <div class="project_border">
+                    <div class="project_border hidden">
 
                         <p class="card_title">Maze solving with DFS, BFS, and Dijkstra's Algorithm</p>
                         <div class="maze_project">
@@ -291,7 +305,7 @@
                     </div>
 
 
-                    <div class="project_border">
+                    <div class="project_border hidden">
                         <p class="card_title">Image Manipulation</p>
                         <div class="image_man_project">
                             <div class="description">
@@ -321,7 +335,7 @@
 
                     </div>
 
-                    <div class="project_border">
+                    <div class="project_border hidden">
                         <p class="card_title">Blackjack</p>
                         <div class="blackjack_project">
                             <div class="description">
@@ -350,7 +364,7 @@
                     </div>
 
 
-                    <div class="project_border">   
+                    <div class="project_border hidden">   
                         <p class="card_title">Clear Cell</p>
                         <div class="clear_cell_project">
                             <div class="description">
@@ -381,7 +395,7 @@
                     </div>
 
 
-                    <div class="project_border">
+                    <div class="project_border hidden">
                         <p class="card_title">Grid Click</p>
                         <div class="grid_click_project">
                             <div class="description">
